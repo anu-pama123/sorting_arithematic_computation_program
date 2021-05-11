@@ -1,4 +1,3 @@
-
 echo 'hellow'
 read -p 'number 1 : ' a
 read -p 'number 2 : ' b
@@ -24,3 +23,17 @@ array[2]=${results["result3"]}
 array[3]=${results["result"]}
 
 echo ${array[@]}
+
+for((j=0;j<4;j++))
+do
+for((i=$((j+1));i<3;i++))
+do
+if [ ${array[i]} -lt ${array[j]} ]
+then
+temp=${array[i]}
+array[$i]=${array[j]}
+array[$j]=$temp
+fi
+done
+done
+echo "Computation result in ascending order ="${array[@]}
