@@ -1,2 +1,2 @@
 echo 'hellow'
-result=$((a+b*))
+result=$((a+b*c))
